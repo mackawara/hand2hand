@@ -1,2 +1,2 @@
 # Calyptic Computers
-New to this thing
+This is our company website. Very much a work in progress"
