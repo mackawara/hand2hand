@@ -9,4 +9,5 @@ const port = 3000;
 var server = app.listen(port, (listening) => {
   console.log("Listening at port 3000");
 });
-app.use(express.static("public"))
+app.use(express.static("public"));
+//app.get("/)
