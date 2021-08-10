@@ -1,0 +1,23 @@
+{
+  "name": "hand2hand",
+  "version": "1.0.0",
+  "description": "\"runs the API \"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mackawara/hand2hand.git"
+  },
+  "author": "Mac Kawara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mackawara/hand2hand/issues"
+  },
+  "homepage": "https://github.com/mackawara/hand2hand#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
