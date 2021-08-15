@@ -164,30 +164,6 @@
       </div>
       <hr class="my-4" />
 
-      <!-- 
-
-    <aside class="aside aside1 boxshadow">
-      <h1>Products and Services</h1>
-      <Ul class="navbar-nav aside1 aside">
-        a.dropdown
-        <li class="nav-item"><a class="dropdown-item" href="inkandtonercartirdges.html">Ink and Toner Cartridges</a>
-        </li>
-        <li class="nav-item"><a class="dropdown-item" href="networkingproducts.html">Networking Services and
-            products</a></li>
-        <li class="nav-item"><a class="dropdown-item" href="printers.html">Printers</a></li>
-        <li class="nav-item"><a class="dropdown-item" href="CCTV">CCTV</a></li>
-        <li class="nav-item"><a class="dropdown-item" href="http://">Phones and tablets</a></li>
-        <li class="nav-item"><a class="dropdown-item" href="webdevelopment.html">Web Development Services</a></li>
-        <li class="nav-item"><a class="dropdown-item" href="softwaresolutions.html">Software Solutions</a></li>
-        <li class="nav-item"><a class="dropdown-item" href="computersandservers">Computers and Servers</a></li>
-        <li class="nav-item"><a class="dropdown-item" href="Stationery">Stationery</a></li>
-        <li class="nav-item"><a class="dropdown-item" href="Groceries.html">Groceries</a></li>
-        <li class="nav-item"><a class="dropdown-item" href="Logisticsservice.html">Logistics services</a></li>
-        <li class="nav-item"><a class="dropdown-item" href="http://">Printing Services</a></li>
-      </Ul>
-
-    </aside> -->
-
       <footer>
         <div class="row">
           <div class="card">
@@ -214,27 +190,5 @@
         </div>
       </footer>
     </div>
-    <script>
-      $("form").on("submit", (e) => {
-        // e.preventDefault();
-
-        const name = $("#name").val().trim();
-        const email = $("#from-email").val().trim();
-        const subject = $("#subject").val().trim();
-        const text = $("#text").val().trim();
-
-        const data = {
-          name,
-          email,
-          subject,
-          text,
-        };
-
-        $.post("/email", data, function () {
-          console.log("Server recieved our data");
-        });
-      });
-      // document.getElementById('#form-data').reset();
-    </script>
   </body>
 </html>

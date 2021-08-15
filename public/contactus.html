@@ -156,46 +156,46 @@
       </footer>
     </div>
 
-    <script>
+    <!-- <script>
         var form=document.getElementById("form");
 form.addEventListener(onsubmit, (event)=> {
            event.preventDefault();
            console.log("send");
   
-           const name = document.getElementById("fname").innerText
-          const email = document.getElementById("email").innerText
-          const subject = document.getElementById("subject").innerText
-          const text = document.getElementById("text").innerText
+           const name = "teshing"// document.getElementById("fname").innerText
+          const email = "teshing"// document.getElementById("email").innerText
+          const subject = "teshing"// document.getElementById("subject").innerText
+          const text ="teshing"//  document.getElementById("text").innerText
   
-          let data = {
-            name,
-            email,
-            subject,
-            text,
-          };
+        /*   var data = {
+            name:name,
+           email:email,
+           subject :subject,
+           text:text,
+          }; */
+
           
-          //const data=form
-          //const dataJson=JSON.stringify(data);
-          const maildata= new FormData(form);
-        //sendMail(maildata);
-        console.log(maildata);
+          const data=form
+          
+         const maildata= new FormData(form);
+        sendMail(name);
+       // console.log(maildata);
         })
-        const sendMail=(maildata)=>{
+        /* const sendMail=(name)=>{
           fetch("/http://localhost:3000/send",{
               method:"post",
-              body:maildata,
-              headers:{
-                  "Content-type":'application/json'
-              }
+              body:name */
+              
+             
           }).then((response) => {
     //return response.json(maildata);
     console.log("server has received our request")
-    console.log(maildata);
+    console.log(dataJson);
    
   });
 };
   
-      </script>
+      </script> -->
 <p id="check"></p>
   </body>
 </html>
