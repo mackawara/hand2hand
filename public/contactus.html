@@ -15,10 +15,10 @@
  <link rel="stylesheet" href="colortheme.css">
 -->
 
-    <script src="index.js"></script>
+     <script src="./index.js"></script>
     <script src="ism/js/ism-2.2.min.js"></script>
     <title>Calyptic</title>
-    <link rel="stylesheet" href="customstyles.css" />
+    <link type="text/css" rel="stylesheet" href="./customstyles.css" />
   </head>
 
   <body>
@@ -64,35 +64,41 @@
       <div class="main">
         <h1>Contact us</h1>
 
-        <div class="contactusfeedback">
-          <form action="send" method="POST" target="_blank" id="form">
+        
+          <form action="/send" method="POST"  id="form">
             <div class="formdiv">
               <div class="form-group">
-                <label for="fname">First name</label>
+                <label for="fname">Full name</label>
                 <input
                   type="text"
-                  id="fname"
-                  name="fname"
+                  id="fullname"
+                  name="fullname"
                   class="form-control"
+                   
                 />
+                <small></small>
               </div>
-              <div class="form-group">
-                <label for="lastname">Last name</label>
-                <input
-                  type="text"
-                  id="lastname"
-                  name="lastname"
-                  class="form-control"
-                />
-              </div>
+            
               <div class="form-group">
                 <label for="email">Email address</label>
                 <input
-                  type="email"
                   id="email"
                   name="email"
                   class="form-control"
+                  
                 />
+                <small></small>
+              </div>
+              <div class="form-group">
+                <label for="email">Mobile Number</label>
+                <input
+                  type="tel"
+                  id="mobileNumber"
+                  name="mobileNumber"
+                  class="form-control"
+                  
+                />
+                <small></small>
               </div>
               <div class="form-group">
                 <label for="email">SUBJECT</label>
@@ -101,7 +107,9 @@
                   id="subject"
                   name="subject"
                   class="form-control"
+                  
                 />
+                <small></small>
               </div>
             </div>
             <div class="paragraph-text">
@@ -122,7 +130,10 @@
                 placeholder=" Your message here!"
                 class="form-group"
               ></textarea>
-              <input type="submit" value="submit" class="btn" id="submit" />
+              <small></small>
+              <button type="submit" value="submit" class="btn" id="submit"  onclick=assign()>Submit</button>
+
+            <!--   <button class="btn" onclick=assign() >assign</button> -->
             </div>
 
           </form>
@@ -156,46 +167,6 @@
       </footer>
     </div>
 
-    <!-- <script>
-        var form=document.getElementById("form");
-form.addEventListener(onsubmit, (event)=> {
-           event.preventDefault();
-           console.log("send");
-  
-           const name = "teshing"// document.getElementById("fname").innerText
-          const email = "teshing"// document.getElementById("email").innerText
-          const subject = "teshing"// document.getElementById("subject").innerText
-          const text ="teshing"//  document.getElementById("text").innerText
-  
-        /*   var data = {
-            name:name,
-           email:email,
-           subject :subject,
-           text:text,
-          }; */
 
-          
-          const data=form
-          
-         const maildata= new FormData(form);
-        sendMail(name);
-       // console.log(maildata);
-        })
-        /* const sendMail=(name)=>{
-          fetch("/http://localhost:3000/send",{
-              method:"post",
-              body:name */
-              
-             
-          }).then((response) => {
-    //return response.json(maildata);
-    console.log("server has received our request")
-    console.log(dataJson);
-   
-  });
-};
-  
-      </script> -->
-<p id="check"></p>
   </body>
 </html>
