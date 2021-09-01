@@ -1,14 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM loaded");
-});
-  var form;
+
+
+  const form = document.getElementById("form");
   function assign() {
-    console.log("testing");
-    form = document.getElementById("form");
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      console.log("event registered");
       validationResult();
     });
   }
@@ -32,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
   function validationResult() {
-    const email = document.getElementById("email"); //.value
+    const email = form.getElementById("email"); //.value
     const inputErrors = [];
     let emailField = new inputValidation(email);
 
@@ -47,10 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
       inputErrors.push(email.name);
     } else {
       emailField.setSuccess();
-      console.log("testSuccess");
     }
 
-    const fullname = document.getElementById("fullname"); //value;
+    const fullname = form.getElementById("fullname"); //value;
 
     let nameField = new inputValidation(fullname);
     if (
@@ -64,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nameField.setSuccess();
     }
 
-    const mobileNumber = document.getElementById("mobileNumber");
+    const mobileNumber = form.getElementById("mobileNumber");
     let mobileNumberField = new inputValidation(mobileNumber);
     if (mobileNumber.value.length > 13 || mobileNumber.value.length < 10) {
       mobileNumberField.setError();
@@ -74,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileNumberField.setSuccess();
     }
 
-    const subject = document.getElementById("subject");
+    const subject = form.getElementById("subject");
     let subjectField = new inputValidation(subject);
     if (subject.value.length > 60) {
       subjectField.setError();
@@ -84,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       subjectField.setSuccess();
     }
 
-    const text = document.getElementById("text"); //value;
+    const text = form.getElementById("text"); //value;
     let textField = new inputValidation(text);
     if (text.value.length > 500) {
       textField.setError();
@@ -92,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
       inputErrors.push(textField.name);
     }
 
-    form = document.getElementById("form");
     const inputs = form.querySelectorAll("input");
 
     for (let i = 0; i < inputs.length; i++) {
@@ -131,20 +125,17 @@ document.addEventListener("DOMContentLoaded", () => {
   } */
   }
   function postMail() {
-    console.log("send");
-    form = document.getElementById("form");
-
     //const formObject = Object.form;
     const maildata = new FormData(form);
 
     sendMail(maildata); //send the FormData we have created
     function sendMail(maildata) {
-      console.log("sendmail Working");
-      fetch("http://localhost:3000/send", {
+      fetch("http://localhost:3000/contactus", {
         method: "POST",
         body: maildata,
       }).then((response) => {
         console.log("server has received our request");
+        console.log(maildata);
       });
     }
 
@@ -152,4 +143,3 @@ document.addEventListener("DOMContentLoaded", () => {
     /* sendMail(maildata); */
     console.log(maildata);
   }
-
