@@ -129,7 +129,7 @@ function validationInput() {
   }
 }
 
-function sendMail() {
+async function sendMail() {
   console.log("sendmail working");
   const options = {
     method: "POST",
@@ -139,17 +139,12 @@ function sendMail() {
     mode: "cors",
     body: JSON.stringify(mailData),
   };
-  fetch("/send", options)
-    .then(() => {
-      console.log("server has received our request");
-      console.log(formData);
-    })
-    .then(() => {
-      console.log("fetch is working");
-    })
-    .catch(() => {
-      console.error();
-    });
+  fetch("/send", options).then((Response) =>
+    console.log(Response.body)
+  ); /* Response.json())
+    .then((data) => {
+      const errors = document.getElementById(errors);
+      (errors.innerText = data)}); */
 }
 
 console.log(formData);

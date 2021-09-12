@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>-->
+
+    <!-- <link rel="stylesheet" href="store.css">
+     <link rel="stylesheet" href="colortheme.css">
+    -->
+
+    <script src="ism/js/ism-2.2.min.js"></script>
+    <title>Calyptic</title>
+    <link type="text/css" rel="stylesheet" href="/customstyles.css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <form action="" name="form"  id="form">
+      <div class="formdiv">
+        <div class="form-group">
+          <label for="fname">Full name</label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            class="form-control"
+             
+          />
+          <small></small>
+        </div>
+      
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            class="form-control"
+            
+          />
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label for="email">Mobile Number</label>
+          <input
+            type="tel"
+            id="mobileNumber"
+            name="mobileNumber"
+            class="form-control"
+            
+          />
+          <small></small>
+        </div>
+        <div class="form-group">
+          <label for="email">SUBJECT</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            class="form-control"/>
+          <small></small>
+        </div>
+      </div>
+      <div class="paragraph-text">
+          <p>
+            We would like to hear from you <br />
+            If you have any feedback, enquiries or orders please leave a mesage
+            for us below and we wil get back to you <br />
+            Fill in your details above so that we can get back to you
+          </p>
+        </div>
+
+        <textarea
+          name="text"
+          id="text"
+          cols="65"
+          rows="10"
+          maxlength="500"
+          placeholder=" Your message here!"
+          class="form-group"
+        ></textarea>
+        <small></small>
+        <button type="submit" value="submit" class="btn" id="submit" >Submit</button>
+
+      <!--   <button class="btn" onclick=assign() >assign</button> -->
+      </div>
+
+    </form>
+     <%-
+    include("./partials/footer.ejs") %>
+  </body>
+</html>
