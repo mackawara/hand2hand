@@ -64,9 +64,12 @@ const FeedbackModel = mongoose.model("feedback", feedbackSchema);
   mobileNumber: mobileNumber,
 });
 
-    feedback.save();
+    try{feedback.save();
     next()
-    console.log("saved to database");}
-    //module.exports(feedback)=feedback
+    console.log("saved to database")}
+    catch{
+
+    }
+  }//module.exports(feedback)=feedback
     module.exports=saveToDataBase
    
