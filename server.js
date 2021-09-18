@@ -18,7 +18,7 @@ async function server() {
   const saveToDataBase = require("./middleware/saveToDatabase");
 
   const app = express();
-  const port = process.env.PORT;
+  const  port = process.env.PORT || 8080
   const {validationRules, validate} = require("./middleware/validation");
   //const { body,  } = require("express-validator");
   let ejs = require("ejs");
